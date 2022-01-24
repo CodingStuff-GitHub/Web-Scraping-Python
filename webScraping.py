@@ -8,6 +8,7 @@ no_of_headlines=int(input("\nEnter number of headlines:"))
 soup = BeautifulSoup(r.content, 'html5lib')
 #class is the tag for the headlines. Chnage it according to the tag in console.
 section = soup.find_all('a', class_='DY5T1d')
+print("Your News Starts from Here : ")
 for elem in section:
 	text=elem.get_text()
 	print("-------------------------------------------------------------------------------------------------------------------------------------------------------------")
